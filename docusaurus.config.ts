@@ -25,8 +25,7 @@ const config: Config = {
   organizationName: 'ConductionNL', // Usually your GitHub org/user name.
   projectName: 'woo-website-template', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -72,6 +71,9 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -86,9 +88,6 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
@@ -124,7 +123,7 @@ const config: Config = {
         {
           label: 'Over Open Webconcept',
           href: 'https://openwebconcept.nl/',
-          position: 'left',
+          position: 'right',
         },
         {
           type: 'html',
